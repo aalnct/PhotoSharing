@@ -1,5 +1,7 @@
 package com.photo.sharing.service;
 
+import com.photo.sharing.model.Photo;
+import com.photo.sharing.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,5 +11,8 @@ import java.util.List;
  */
 @Service
 public interface PhotoSharingService {
-    public List findAll();
+    List findAll();
+    Photo save(Photo photo);
+    List<Photo> findByUser(User user);
+    Photo findByPhotoId(Long photoId);
 }
